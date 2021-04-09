@@ -29,6 +29,15 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
 
+  flutter_bloc: ^6.1.1 #状态管理框架
+  equatable: ^1.2.3 #增强组件相等性判断
+
+  fish_redux: ^0.3.4
+  #演示列表需要用到的库
+  dio: ^3.0.9    #网络请求框架
+  json_annotation: ^2.4.0 #json序列化和反序列化用的
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
