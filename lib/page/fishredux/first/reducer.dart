@@ -6,12 +6,11 @@ import 'state.dart';
 Reducer<FirstState> buildReducer() {
   return asReducer(
     <Object, Reducer<FirstState>>{
-      FirstAction.action: _onAction,
+      FirstAction.updateMsg: _updateMsg,
     },
   );
 }
 
-FirstState _onAction(FirstState state, Action action) {
-  final FirstState newState = state.clone();
-  return newState;
+FirstState _updateMsg(FirstState state, Action action) {
+  return state.clone()..msg = action.payload;
 }

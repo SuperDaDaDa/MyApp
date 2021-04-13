@@ -1,23 +1,20 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:flutter_my_app/page/fishredux/counter/effect.dart';
 import 'package:flutter_my_app/page/fishredux/counter/view.dart';
 
 // import 'effect.dart';
 import 'reducer.dart';
 import 'state.dart';
 
-
 class CountPage extends Page<CountState, Map<String, dynamic>> {
   CountPage()
       : super(
-            initState: initState,
-            // effect: buildEffect(),
-            reducer: buildReducer(),
-            view: buildView,
-            dependencies: Dependencies<CountState>(
-                adapter: null,
-                slots: <String, Dependent<CountState>>{
-                }),
-            middleware: <Middleware<CountState>>[
-            ],);
-
+          initState: initState,
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          view: buildView,
+          dependencies: Dependencies<CountState>(
+              adapter: null, slots: <String, Dependent<CountState>>{}),
+          middleware: <Middleware<CountState>>[],
+        );
 }

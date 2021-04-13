@@ -26,9 +26,8 @@ Widget _bodyWidget(CountState state, Dispatch dispatch){
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: (){
-        // dispatch(CountActionCreator.countIncrease());
-        //点击事件，调用action 计数自增方法
-        dispatch(CountActionCreator.updateCount());
+       dispatch(CountActionCreator.countIncrease());
+       //  dispatch(CountActionCreator.test());
       }, child: Icon(Icons.add),
     ),
   );
