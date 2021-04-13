@@ -9,6 +9,7 @@ import 'package:flutter_my_app/page/fishredux/first/page.dart';
 import 'package:flutter_my_app/page/fishredux/guide/page.dart';
 import 'package:flutter_my_app/page/fishredux/list/page.dart';
 import 'package:flutter_my_app/page/fishredux/list_edit/page.dart';
+import 'package:flutter_my_app/page/fishredux/multiList/page.dart';
 import 'package:flutter_my_app/page/fishredux/second/page.dart';
 
 
@@ -48,6 +49,7 @@ class RouteConfig {
   ///列表模块演示
   static const String listPage = 'page/list';
   static const String listEditPage = 'page/listEdit';
+  static const String listMultiPage = 'page/listMulti';
 
   ///Component
   static const String componentPage = 'page/component';
@@ -61,6 +63,7 @@ class RouteConfig {
       RouteConfig.secondPage: SecondPage(),
       RouteConfig.listPage: ListPage(),
       RouteConfig.listEditPage: ListEditPage(),
+      RouteConfig.listMultiPage: MultiListPage(),
       // RouteConfig.componentPage: CompPage(),
     },
    // visitor: StoreConfig.visitor,

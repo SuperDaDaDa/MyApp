@@ -11,7 +11,7 @@ Widget buildView(GuideState state, Dispatch dispatch, ViewService viewService) {
 Widget _bodyWidget(GuideState state, Dispatch dispatch) {
   return Scaffold(
       appBar: AppBar(
-        title: Text("1111111111"),
+        title: Text("示例"),
       ),
       body: Container(
         width: double.infinity,
@@ -37,6 +37,12 @@ Widget _bodyWidget(GuideState state, Dispatch dispatch) {
                 dispatch(GuideActionCreator.jumpToListEdit());
               },
               child: Text("列表页编辑"),
+            ),
+            FlatButton(
+              onPressed: () {
+                dispatch(GuideActionCreator.jumpToMultiList());
+              },
+              child: Text("多样式列表"),
             ),
             FlatButton(
               onPressed: () {
