@@ -12,6 +12,7 @@ Effect<GuideState> buildEffect() {
     GuideAction.jumpToList: _jumpToList,
     GuideAction.jumpToListEdit: _jumpToListEdit,
     GuideAction.jumpToMultiList: _jumpToMultiList,
+    GuideAction.jumpToComponent: _jumpToComponent
   });
 }
 
@@ -33,4 +34,8 @@ void _jumpToListEdit(Action action, Context<GuideState> ctx) {
 
 void _jumpToMultiList(Action action, Context<GuideState> ctx) {
   Navigator.pushNamed(ctx.context, RouteConfig.listMultiPage);
+}
+
+void _jumpToComponent(Action action, Context<GuideState> ctx) {
+  Navigator.pushNamed(ctx.context, RouteConfig.componentPage);
 }

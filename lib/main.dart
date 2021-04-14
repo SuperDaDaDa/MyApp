@@ -5,6 +5,7 @@ import 'package:flutter_my_app/page/cubit/counter_page.dart';
 ///需要使用hide隐藏Page
 import 'package:flutter/cupertino.dart' hide Page;
 import 'package:flutter/material.dart' hide Page;
+import 'package:flutter_my_app/page/fishredux/comp/page.dart';
 import 'package:flutter_my_app/page/fishredux/counter/page.dart';
 import 'package:flutter_my_app/page/fishredux/first/page.dart';
 import 'package:flutter_my_app/page/fishredux/guide/page.dart';
@@ -132,7 +133,7 @@ class RouteConfig {
       RouteConfig.listPage: ListPage(),
       RouteConfig.listEditPage: ListEditPage(),
       RouteConfig.listMultiPage: MultiListPage(),
-      // RouteConfig.componentPage: CompPage(),
+      RouteConfig.componentPage: CompCasePage(),
     },
     visitor: StoreConfig.visitor,
   );

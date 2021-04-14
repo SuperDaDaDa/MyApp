@@ -50,6 +50,12 @@ Widget _bodyWidget(GuideState state, Dispatch dispatch) {
               },
               child: Text("计数器"),
             ),
+            FlatButton(
+              onPressed: () {
+                dispatch(GuideActionCreator.jumpToComponent());
+              },
+              child: Text("组件用法"),
+            ),
           ],
         ),
       ));
