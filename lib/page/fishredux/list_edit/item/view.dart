@@ -16,7 +16,10 @@ Widget buildView(EditItemState state, Dispatch dispatch, ViewService viewService
         trailing: Checkbox(
           value: state.itemStatus,
           ///Checkbox的点击操作：状态变更
-          onChanged: (value) => dispatch(EditItemActionCreator.onChange(state.id)),
+          onChanged: (value) {
+            dispatch(EditItemActionCreator.onClear(state.id));
+            dispatch(EditItemActionCreator.onChange(state.id));
+          }
         ),
       ),
     ),

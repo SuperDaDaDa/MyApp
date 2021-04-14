@@ -2,6 +2,8 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_my_app/page/fishredux/counter/action.dart';
 import 'package:flutter_my_app/page/fishredux/counter/state.dart';
+import 'package:flutter_my_app/page/fishredux/store/action.dart';
+import 'package:flutter_my_app/page/fishredux/store/store.dart';
 
 
 
@@ -13,6 +15,7 @@ Widget _bodyWidget(CountState state, Dispatch dispatch){
   return Scaffold(
     appBar: AppBar(
       title: Text("FishRedux"),
+      backgroundColor: state.store.themeColor,
     ),
     body: Center(
       child: Column(
@@ -26,8 +29,8 @@ Widget _bodyWidget(CountState state, Dispatch dispatch){
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: (){
-       dispatch(CountActionCreator.countIncrease());
-       //  dispatch(CountActionCreator.test());
+       // dispatch(CountActionCreator.countIncrease());
+        GlobalStore.store.dispatch(GlobalActionCreator.onChangeThemeColor());
       }, child: Icon(Icons.add),
     ),
   );
