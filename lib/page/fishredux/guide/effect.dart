@@ -1,6 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/widgets.dart' hide Action;
 import 'package:flutter_my_app/main.dart';
+import 'package:flutter_my_app/page/fishredux/broadcast/action.dart';
 
 import 'action.dart';
 import 'state.dart';
@@ -12,7 +13,9 @@ Effect<GuideState> buildEffect() {
     GuideAction.jumpToList: _jumpToList,
     GuideAction.jumpToListEdit: _jumpToListEdit,
     GuideAction.jumpToMultiList: _jumpToMultiList,
-    GuideAction.jumpToComponent: _jumpToComponent
+    GuideAction.jumpToComponent: _jumpToComponent,
+    //接受发送的广播消息
+    BroadcastAction.toNotify: _toNotify,
   });
 }
 
@@ -38,4 +41,10 @@ void _jumpToMultiList(Action action, Context<GuideState> ctx) {
 
 void _jumpToComponent(Action action, Context<GuideState> ctx) {
   Navigator.pushNamed(ctx.context, RouteConfig.componentPage);
+}
+
+///表明一处发送，多处接受
+void _toNotify(Action action, Context<GuideState> ctx) async {
+  ///接受广播
+  print("导航页面:${action.payload}");
 }

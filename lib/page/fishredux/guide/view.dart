@@ -1,5 +1,6 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_my_app/page/fishredux/broadcast/action.dart';
 
 import 'action.dart';
 import 'state.dart';
@@ -55,6 +56,11 @@ Widget _bodyWidget(GuideState state, Dispatch dispatch) {
                 dispatch(GuideActionCreator.jumpToComponent());
               },
               child: Text("组件用法"),
+            ),
+            FlatButton(
+              onPressed: () {
+              },
+              child: Text("广播"),
             ),
           ],
         ),

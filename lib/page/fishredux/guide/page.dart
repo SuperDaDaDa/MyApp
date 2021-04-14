@@ -8,15 +8,12 @@ import 'view.dart';
 class GuidePage extends Page<GuideState, Map<String, dynamic>> {
   GuidePage()
       : super(
-            initState: initState,
-            effect: buildEffect(),
-            reducer: buildReducer(),
-            view: buildView,
-            dependencies: Dependencies<GuideState>(
-                adapter: null,
-                slots: <String, Dependent<GuideState>>{
-                }),
-            middleware: <Middleware<GuideState>>[
-            ],);
-
+          initState: initState,
+          effect: buildEffect(),
+          reducer: buildReducer(),
+          view: buildView,
+          dependencies: Dependencies<GuideState>(
+              adapter: null, slots: <String, Dependent<GuideState>>{}),
+          middleware: <Middleware<GuideState>>[],
+        );
 }
